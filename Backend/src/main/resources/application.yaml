@@ -1,0 +1,32 @@
+spring:
+  servlet:
+    multipart:
+        max-file-size: 1000000000MB
+        max-request-size: 1000000000MB
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://swtp-airon.ges.thm.de:5432/airon
+    username: postgres
+    password: admin-airon
+    driverClassName: org.postgresql.Driver
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+
+logging:
+  level:
+    org.springframework:
+      web:
+        servlet:
+          mvc:
+            method:
+              annotation: TRACE

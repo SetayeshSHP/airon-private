@@ -1,0 +1,573 @@
+{
+	"info": {
+		"_postman_id": "b3ab7cc4-73bf-4650-9613-d2c81ecfad8a",
+		"name": "Airon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21118718"
+	},
+	"item": [
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Add new patient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"inpId\": \"SB-000\",\n    \"age\": 35,\n    \"sex\":\"m\"\n}"
+						},
+						"url": {
+							"raw": "{{backend_host}}/patient/add-patient",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"patient",
+								"add-patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete patint",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{backend_host}}/patient/delete-patient/4",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"patient",
+								"delete-patient",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update patient",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"id\": 8,\n    \"inpId\": \"DR-234\",\n    \"age\": 28,\n    \"sex\":\"m\"\n}"
+						},
+						"url": {
+							"raw": "{{backend_host}}/patient/update-patient",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"patient",
+								"update-patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all paitents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend_host}}/patient/get-all-patients",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"patient",
+								"get-all-patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User to Patient",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{backend_host}}/patient/3/user/1",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"patient",
+								"3",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Analysis",
+			"item": [
+				{
+					"name": "add new analysis",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"data\": \"ii\",\n    \"row\": \"mm\"\n}"
+						},
+						"url": {
+							"raw": "{{backend_host}}/analysis/add-analysis",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"analysis",
+								"add-analysis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update analysis",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"data\": \"uu\",\n    \"row\": \"zzo\"\n}"
+						},
+						"url": {
+							"raw": "{{backend_host}}/analysis/update-analysis",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"analysis",
+								"update-analysis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Patient to Analysis",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{backend_host}}/analysis/1/patient/2",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"analysis",
+								"1",
+								"patient",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Method to Analysis",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"data\": \"uu\",\n    \"row\": \"zzo\"\n}"
+						},
+						"url": {
+							"raw": "{{backend_host}}/analysis/1/method/2",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"analysis",
+								"1",
+								"method",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Image to Analysis",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"data\": \"uu\",\n    \"row\": \"zzo\"\n}"
+						},
+						"url": {
+							"raw": "{{backend_host}}/analysis/1/image/2",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"analysis",
+								"1",
+								"image",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete analysis",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"inpId\": \"DR-260\",\n    \"age\": 20,\n    \"sex\":\"d\"\n}"
+						},
+						"url": {
+							"raw": "{{backend_host}}/analysis/delete-analysis/5",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"analysis",
+								"delete-analysis",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all analysis",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{backend_host}}/analysis/get-all-analysis",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"analysis",
+								"get-all-analysis"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Analysis Method",
+			"item": [
+				{
+					"name": "Get all Methods",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backend_host}}/analysismethod/get-all-methods",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"analysismethod",
+								"get-all-methods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new Method",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"WE23\",\n    \"type\":\"husten\"\n}"
+						},
+						"url": {
+							"raw": "{{backend_host}}/analysismethod/add-method",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"analysismethod",
+								"add-method"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Whole Slide Image",
+			"item": [
+				{
+					"name": "Get all Image",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{backend_host}}/image/get-all-image",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"image",
+								"get-all-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new Method Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"staining\": \"jnp\",\n    \"manification\":\"patient\"\n}"
+						},
+						"url": {
+							"raw": "{{backend_host}}/image/add-image",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"image",
+								"add-image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Result",
+			"item": [
+				{
+					"name": "Get all Results",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{backend_host}}/result/get-all-result",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"result",
+								"get-all-result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new result",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resultsb\": \"[0.841, 'Meningioma benign-2', 'results.zip']\",\n    \"file\": \"results.zip\"\n}"
+						},
+						"url": {
+							"raw": "{{backend_host}}/result/add-result",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"result",
+								"add-result"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Analysis to Result",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{backend_host}}/result/2/analysis/1",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"result",
+								"2",
+								"analysis",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get all Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{backend_host}}/user/get-all-users",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"user",
+								"get-all-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"max\",\n    \"department\": \"IT\",\n    \"email\": \"max@airon.de\",\n    \"password\": \"*******\"\n\n}"
+						},
+						"url": {
+							"raw": "{{backend_host}}/user/add-user",
+							"host": [
+								"{{backend_host}}"
+							],
+							"path": [
+								"user",
+								"add-user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

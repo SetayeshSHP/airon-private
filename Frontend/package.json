@@ -1,0 +1,25 @@
+{
+	"name": "airon",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"package": "svelte-kit package",
+		"preview": "svelte-kit preview",
+		"prepare": "svelte-kit sync"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"carbon-components-svelte": "^0.66.1",
+		"svelte": "^3.44.0",
+		"svelte-multiselect": "^5.0.2"
+	},
+	"type": "module",
+	"dependencies": {
+		"svelecte": "^3.8.0",
+		"svelte-confirm": "^0.0.0",
+		"svelte-notifications": "^0.9.96",
+		"svelte-spa-router": "^3.2.0"
+	}
+}
